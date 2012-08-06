@@ -1,0 +1,336 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style/barlesque-2.0.5-desktop-3.5-main.css">
+    <link rel="stylesheet" type="text/css" href="style/timeline-default.css">
+    <style type="text/css">
+			.kl-timeline{
+				position:relative;
+				left:80px;
+			}
+    </style>
+
+    <script type="text/javascript" src="scripts/kltimeline/vendor/require.js"></script>
+    <script type="text/javascript">
+
+      var kltimelineConfig = {
+        debug: true,
+        scriptPath: ' '
+      };
+      var url = 'scripts/kltimeline';
+      require({ 
+        baseUrl: url,
+        paths: {
+          'jquery-1': 'vendor/jquery.min',
+          'istats-1': 'vendor/istats.fake'
+        }
+      });
+
+    </script>
+    <script type="text/javascript" src="scripts/kltimeline/main.js"></script>
+  </head>
+  <body>
+
+		<!-- Templates Start -->
+    <script id="drag-handle" type="text/html">
+      <li class="drag-handle">
+      <div class="handle-ridge">
+      </div>
+      </li>
+    </script>
+
+    <script id="carousel" type="text/html">
+
+      <div class="kl-timeline">
+        <div class="tl-header-details">
+          <h2 class="tl-header-title">{{name}}</h2>
+        </div>
+        <div class="kl-timeline-viewport">
+          <ul class="timeline">
+          </ul>
+        </div>
+      </div>
+
+    </script>
+
+    <script id="carousel-event" type="text/html">
+
+      <li class="tl-event"> 
+      <a href="{{resourceURL}}">
+        <img src="{{imageURL}}"/>
+        <div class="tl-details">
+          <span class="tl-event-date">
+            {{date}}
+          </span>
+          <h3 class="tl-event-title">
+            {{name}}
+          </h3>
+          <span class="tl-event-summary">
+            {{summary}}
+          </span>
+        </div>
+      </a>
+      </li>
+
+    </script>
+
+    <script id="carousel-panel" type="text/html">
+
+      <li class="tl-panel {{panelClass}}"> 
+      <div class="tl-panel-details">
+        <span class="tl-panel-summary">{{summary}}</span>
+        <span class="tl-panel-date-range">{{range}}</span>
+        <span class="tl-panel-timeline-length">{{length}}</span>
+      </div> 
+      </li>
+
+    </script>
+
+    <script id="navbar" type="text/html">
+
+      <div class="kl-timeline-navbar-container">
+        <span class="begin-date">{{beginDate}}</span>
+        <div class="kl-timeline-navbar">
+          <ul class="navbar">
+          </ul>
+        </div>
+        <span class="end-date">{{endDate}}</span>
+      </div>
+
+    </script>
+
+    <script id="navbar-event" type="text/html">
+      <li class="tl-event-navbar">  
+      <a href="#" tabindex="-1">
+        <span class="navbar-tooltip">{{name}}</span>
+        <span class="indicator">
+          <img src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+        </span>
+      </a>
+      </li>
+    </script>
+		<!-- Templates End -->
+
+    <div id="blq-main" class="blq-clearfix">
+      <div id="kl_timeline" class = "kl-timeline nojs">
+        <div class="tl-header-details">
+          <h2 class="tl-header-title">
+            Timeline Header
+          </h2>
+          <span class="tl-header-summary">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue.
+          </span>
+          <div class="tl-header-date-range">
+            <span class="tl-header-start-date">
+              1970 
+            </span>
+            -
+            <span class="tl-header-end-date">
+              1974
+            </span>
+          </div>
+        </div>
+
+        <div class="kl-timeline-viewport">
+          <ul class="timeline">
+            <li class="tl-panel begin-panel">
+            <div class="tl-panel-details">
+              <span class="tl-panel-summary">Timeline summary</span>
+              <span class="tl-panel-date-range">1970 - 1974</span>
+              <span class="tl-panel-timeline-length">5 Events</span>
+            </div>
+            </li>
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+
+              <li class="tl-event">	
+              <a href="#">        
+                <img src="img/timeline-placeholder.png"/>
+                <div class="tl-details">
+
+                  <span class="tl-event-date">
+                    January 12th, 2012
+                  </span>
+                  <h3 class="tl-event-title">
+                    Placeholder title
+                  </h3>
+                 <span class="tl-event-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mi eget est sodales fermentum mattis leo congue. Integer pellentesque lacus id odio cursus faucibus.
+                  </span>
+
+                </div>
+              </a>
+              </li>
+
+            <li class="tl-panel end-panel">
+            <div class="tl-panel-details">
+              <span class="tl-panel-summary">Timeline summary</span>
+              <span class="tl-panel-date-range">1970 - 1974</span>
+              <span class="tl-panel-timeline-length">5 Events</span>
+            </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

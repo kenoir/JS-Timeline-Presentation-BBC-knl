@@ -1,0 +1,46 @@
+body{
+    font-family: arial,sans-serif;
+    background-color:white;
+}
+    
+.draggable{
+    margin-top:20px;
+    border: 2px dashed black;
+    width: 100px;
+    padding:20px;
+    text-align:center;    
+}
+
+.droppable{
+    position: absolute;
+    top: 111px;
+    left:50%;
+    border: 2px dashed grey;
+    height: 300px;
+    width:300px;
+    text-align:center;
+    
+    -webkit-transform: scale(1);   
+    -webkit-transition: 0.5s ease-in;
+}
+
+.droppable span{
+  position:relative;
+  top: 140px;
+  color:white;
+}
+
+.droppable:hover{
+    -webkit-transform: scale(1.2);   
+    -webkit-transition: 0.5s ease-in;
+}
+
+h2 {
+    color:lightgrey;  
+    font-size: 1.3em;
+    margin-top: 10px;    
+}
+
+p.note {
+  font-size:0.9em    
+}

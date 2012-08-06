@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="stylesheet" type="text/css" href="../style/jasmine.css">
+
+  <script type="text/javascript" src="../scripts/jasmine/jasmine.js"></script>
+  <script type="text/javascript" src="../scripts/jasmine/jasmine-html.js"></script>
+  <script type="text/javascript" src="../scripts/jasmine/reporters/jasmine.junit_reporter.js"></script>
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="timeline/vendor/require.js"></script>
+  <script type="text/javascript" src="timeline/vendor/jquery.min.js"></script>
+
+  <script type="text/javascript" src="timeline/helpers/jasmine-jquery.js"></script>
+  <script type="text/javascript" src="timeline/helpers/sinon.js"></script>
+  <script type="text/javascript" src="timeline/helpers/SpecHelper.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="timeline/models/GraphicalTimelineSpec.js"></script>
+  <script type="text/javascript" src="timeline/models/GraphicalTimelineEventSpec.js"></script>
+  <script type="text/javascript" src="timeline/models/ParserSpec.js"></script>
+  <script type="text/javascript" src="timeline/models/StatsSpec.js"></script>
+  <script type="text/javascript" src="timeline/models/TimelineEventSpec.js"></script>
+  <script type="text/javascript" src="timeline/models/TimelineSpec.js"></script>
+
+  <script type="text/javascript" src="timeline/controllers/TimelineControllerSpec.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+									
+			var relativePath = window.location.pathname.replace(/\/specs\/kltimeline\.html/,"");
+      jasmine.getFixtures().fixturesPath = 'timeline/fixtures';					
+
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+      var junitReporter = new jasmine.JUnitXmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+			jasmineEnv.addReporter(junitReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+     
+				require({ baseUrl: "file://" + window.location.hostname + '/' + relativePath + '/scripts/kltimeline/', waitSeconds: 30 }); 
+
+				window.webkitRequestAnimationFrame = null;
+				window.mozRequestAnimationFrame = null;
+				window.oRequestAnimationFrame = null;
+
+				require({
+					paths: {
+						'jquery-1': 'vendor/jquery.min',
+						'istats-1': 'vendor/istats.fake',
+						'timeline': 'timeline',
+						'vendor': 'vendor',
+						'template': 'template'
+					}
+				});
+
+				require([
+				'timeline/controllers/TimelineController',
+				'timeline/models/Stats',
+				'timeline/models/Parser',
+				'timeline/models/Timeline',
+				'timeline/models/TimelineEvent',
+				'timeline/models/GraphicalTimeline',
+				'timeline/models/GraphicalTimelineEvent',
+				'timeline/models/ConfigurationLoader',
+				'file://' + window.location.hostname + relativePath + '/specs/timeline/fixtures/TimelineView.js',
+				'file://' + window.location.hostname + relativePath + '/specs/timeline/fixtures/EventView.js',
+				],function(TimelineController,Stats,Parser,Timeline,TimelineEvent,GraphicalTimeline,GraphicalTimelineEvent,ConfigurationLoader,TimelineView,EventView){
+          window.js_require_modules = Array();
+					window.js_require_modules['TimelineController'] = TimelineController;
+					window.js_require_modules['Stats'] = Stats;
+					window.js_require_modules['Parser'] = Parser;
+					window.js_require_modules['Timeline'] = Timeline;
+					window.js_require_modules['TimelineEvent'] = TimelineEvent;
+					window.js_require_modules['GraphicalTimeline'] = GraphicalTimeline;
+					window.js_require_modules['GraphicalTimelineEvent'] = GraphicalTimelineEvent;
+					window.js_require_modules['TimelineView'] = TimelineView;
+					window.js_require_modules['EventView'] = EventView;
+
+				 jasmineEnv.execute();
+
+		});
+	}
+
+  })();
+</script>
+</head>
+
+<body>
+</body>
+</html>

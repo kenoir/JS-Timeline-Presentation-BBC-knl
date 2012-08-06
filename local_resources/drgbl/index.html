@@ -1,0 +1,77 @@
+<html><head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+
+    <script type="text/javascript" src="javascripts/cmptbl.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="javascripts/drgbl.js"></script>
+    <script type="text/javascript" src="javascripts/drpbl.js"></script>
+
+ </head>
+  <body>
+  <a href="https://github.com/kenoir/drgbl.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    <h1>drgbl / drpbl / cmptbl</h1>
+    <h2>draggable / droppable / compatible</h2>
+    <p class="note">Lightweight cross browser drag/drop library</p>
+
+    <div id="dragBox1" class="draggable">
+      Drag me!
+    </div>
+
+    <div id="dragBox2" class="draggable">
+      Me too!
+    </div>
+
+    <div id="dragBox3" class="draggable">
+      And me!
+    </div>
+
+    <div id="dropBox1" class="droppable">
+	    <span>I'm only 3.8KB<br/>A custom JqueryUI is 33KB ...</span>
+    </div>
+
+    <script type="text/javascript">
+      var draggableDiv1 = document.getElementById("dragBox1");
+      var draggableDiv2 = document.getElementById("dragBox2");
+      var draggableDiv3 = document.getElementById("dragBox3");
+
+      var droppableDiv1 = document.getElementById("dropBox1");
+
+      var opts1 = {
+        axis:'x'
+      };
+
+      var opts2 = {
+        callback: {
+          dragstart: function(){this.style.backgroundColor='red';},
+          dragging: function(){this.style.backgroundColor='blue';},
+          dragend: function(){this.style.backgroundColor='green';}
+        }
+      };
+
+      var opts3 = {
+        bound: function(m){
+          if(m.x < 200 &&
+             m.x > 0 &&
+             m.y < 200 &&
+             m.y > 0 ){return true;}
+          return false;
+        }
+      };
+
+      new Draggable(draggableDiv1,opts1);
+      new Draggable(draggableDiv2,opts2);
+      new Draggable(draggableDiv3,opts3);
+
+      var events1 = {
+        dropped: function(){
+          droppableDiv1.style.backgroundColor='purple';
+          this.style.backgroundColor='yellow';
+        }
+      }
+
+      new Droppable(droppableDiv1,events1);
+   </script>
+ 
+  
+
+</body></html>

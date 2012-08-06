@@ -1,0 +1,68 @@
+.timeline h1{
+	top: auto !important;
+	bottom: -20px !important; 
+	z-index: 9999;
+}
+.timeline .insterstitial{
+  background-color:lightblue;  
+  font-size:2em  
+}
+
+.timeline ul{
+	position:relative;
+	top:100px;
+	left:20%;
+	width:80%;
+}
+.timeline .slide h1 {
+	font-size: 2.5em;
+}
+.timeline #flashtimeline {
+	position:relative;
+	top:100px;
+	width: 50%;
+	margin: 0px auto;
+	border: solid 5px lightblue;
+	text-align: center;
+	background-color:white;
+}
+.timeline .links-section{
+	top:100px;
+	text-align:center;
+	position:relative;
+	width: 50%;
+	margin: 0px auto;
+}
+.timeline iframe,
+.timeline .image-cradle img {
+	border: solid 5px lightblue;
+}
+.timeline iframe,
+.timeline .image-cradle{
+	position:relative;
+	top:20px;    
+}
+.timeline iframe{
+	width:800px;
+	height:600px;    
+}
+.timeline .fancy-transform {
+	display:block;
+	position:relative;
+	top:100px;
+	left: 30%;
+	width:40%;
+	height:200px;
+	font-size: 0.5em;
+
+	-webkit-transform: scale(1,1) rotate( 0deg );
+	-webkit-transition-duration: 0.5s;
+}
+
+.timeline .fancy-transform:hover {
+	background-color:cyan;
+	top:200px;
+
+	-webkit-transform: scale(1.5,1.5) rotate( 10deg );
+	-webkit-transition-duration: 0.5s;
+}

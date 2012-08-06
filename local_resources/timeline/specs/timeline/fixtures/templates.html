@@ -1,0 +1,67 @@
+
+  <script id="carousel" type="text/html">
+
+    <div class="kl-timeline">
+      <div class="tl-header-details">
+        <span class="tl-header-title">{{name}}</span>
+        <span class="tl-header-date-range">{{range}}</span>
+      </div>
+      <div class="kl-timeline-viewport">
+        <ul class="timeline">
+        </ul>
+      </div>
+    </div>
+
+  </script>
+
+  <script id="carousel-event" type="text/html">
+
+    <li class="tl-event">	
+      <a href="{{resourceURL}}">
+        <img src="{{imageURL}}"/>
+        <div class="tl-details">
+          <span class="tl-event-title">
+            {{name}}
+          </span>
+          <span class="tl-event-date">
+            {{date}}
+          </span>
+          <span class="tl-event-summary">
+            {{summary}}
+          </span>
+        </div>
+      </a>
+    </li>
+
+  </script>
+
+  <script id="carousel-panel" type="text/html">
+
+    <li class="tl-panel"> 
+      <img src="img/timeline-panel-bg.png"/>
+      <div class="tl-panel-details">
+        <span class="tl-panel-title">{{name}}</span>
+        <span class="tl-panel-date-range">{{range}}</span>
+        <span class="tl-panel-timeline-length">{{length}}</span>
+      </div> 
+    </li>
+
+  </script>
+
+  <script id="navbar" type="text/html">
+
+    <div class="kl-timeline-navbar">
+      <ul class="navbar">
+      </ul>
+    </div>
+
+  </script>
+
+  <script id="navbar-event" type="text/html">
+    <li class="tl-event-navbar">	
+    &nbsp;
+    </li>
+  </script>
+
+
+
