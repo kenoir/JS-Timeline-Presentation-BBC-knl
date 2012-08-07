@@ -209,10 +209,58 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 	    <iframe src="local_resources/phpdocs/index.html"></iframe>
 		</section>
 
-		<section class="slide">
+		<!-- The PAL Application -->
+		<section class="slide insterstitial">
 		<h1>Monitoring, Logging, Caching</h1>
-
 		</section>
+	
+		<section class="slide">
+		<h1>PAL Monitoring</h2>
+			<div class="image-cradle">
+				<h2>Zenoss</h2>
+				<img src="local_resources/zenoss.png" width="800"/>	
+			</div>
+			<ul style="top: 20px;">
+				<li>Thing that we are monitoring in Zenoss</li>
+				<li>...</li>
+			</ul>
+		</div>
+		
+		</section>
+
+		<section class="slide">
+		<h1>Logging actions with iStats</h1>
+<pre>
+...
+dragend: function(){
+  var logData = { 
+    'eventResourceURL' : 
+      carousel.focussedEvent().timelineEvent.resourceURL 
+  };
+
+  Stats.log('dragged.timeline.kltimeline',logData);
+}
+...
+</pre>
+		<div class="quicknote">
+			<p><a href="http://www.bbc.co.uk/frameworks/istats/guides/logging-actions">http://www.bbc.co.uk/frameworks/istats/guides/logging-actions</a></p>
+		</div>
+		</section>
+
+		<section class="slide">
+		<h1>Logging</h1>
+		</div>
+		</section>
+
+		<section class="slide">
+		<h1>Caching</h1>
+		<h2>mod_cache on the News Stack</h2>
+		<div class="quicknote">
+			<p><a href="https://confluence.dev.bbc.co.uk/display/frameworks/Sharing+PAL+Content+with+News+Stack">https://confluence.dev.bbc.co.uk/display/frameworks/Sharing+PAL+Content+with+News+Stack</a></p>
+
+		</div>
+		</section>
+
 
 
 		<!-- End slides. -->
