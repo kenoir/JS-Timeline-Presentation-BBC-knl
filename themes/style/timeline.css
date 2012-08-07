@@ -43,9 +43,14 @@
 	top:20px;    
 }
 .timeline iframe{
-	width:800px;
+	width:1000px;
 	height:600px;    
 }
+
+.timeline .narrower iframe{
+	width:800px;    
+}
+
 .timeline .fancy-transform {
 	display:block;
 	position:relative;
