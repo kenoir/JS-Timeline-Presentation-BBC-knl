@@ -73,6 +73,10 @@ font-family: 'Source Sans Pro', sans-serif !important;
 	height:600px;    
 }
 
+.timeline .wider iframe{
+	width:1200px;    
+}
+
 .timeline .narrower iframe{
 	width:800px;    
 }
