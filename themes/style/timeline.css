@@ -33,6 +33,11 @@
 	background-color:lightblue;  
 	font-size:2em  
 }
+
+.timeline .insterstitial h1{
+	top: 50% !important;
+	bottom: auto !important; 
+}
 .cssreflections .timeline .insterstitial h1{
 	-webkit-box-reflect: none !important;
 	padding:0px;
