@@ -2,7 +2,7 @@
 .timeline h2,
 .timeline p,
 .timeline li{
-font-family: 'Source Sans Pro', sans-serif !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .timeline h1{
@@ -24,11 +24,12 @@ font-family: 'Source Sans Pro', sans-serif !important;
 	-webkit-box-reflect: below -0.256em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent)) !important;
 }
 .timeline .insterstitial{
-  background-color:lightblue;  
-  font-size:2em  
+	background-color:lightblue;  
+	font-size:2em  
 }
 .cssreflections .timeline .insterstitial h1{
-    -webkit-box-reflect: none !important;
+	-webkit-box-reflect: none !important;
+	padding:0px;
 }
 
 .timeline ul{
