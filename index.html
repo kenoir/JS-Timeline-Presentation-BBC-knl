@@ -94,13 +94,20 @@
 		</section>
 
 		<section class="slide wider">
-		<h1>PHPUnit Tests</h1>
+		<h1>PHPUnit Tests Report</h1>
 		<iframe src="local_resources/phpunit.html"></iframe>
 		</section>
 
 		<section class="slide wider">
-		<h1>Code coverage</h1>
+		<h1>PHPUnit Tests Coverage</h1>
 		<iframe src="local_resources/unit_test_coverage/index.html"></iframe>
+		</section>
+		
+		<section class="slide wider">
+		<h1>TDD Approach</h1>
+		<ul>
+		    <li>Testing strategy</li>
+		</ul>
 		</section>
 
 		<section class="slide">
@@ -222,7 +229,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		</section>
 	
 		<section class="slide">
-		<h1>PAL Monitoring</h2>
+		<h1>Zenoss Monitoring</h2>
 		<iframe src="https://monitor.forge.bbc.co.uk/zport/dmd/Reports/Multi-Graph%20Reports/BBC%20Applications/kltimeline/kltimeline_Int#graph_3:True;"></iframe>
 		<!--
 			<div class="image-cradle">
@@ -238,11 +245,12 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		</section>
 		
 		<article class="slide wider" id="monitoring">
-			<h1>Zenoss monitoring</h1>
+			<h1>What we monitor</h1>
 			<section>
 				<ul style="top: 20px;">
-					<li>This</li>
-					<li>And that as well</li>
+					<li>Service errors</li>
+					<li>Unexistent Timeline resource</li>
+					<li>Invalid Timeline Json feed</li>
 				</ul>
 			</section>
 			<section>
@@ -266,8 +274,20 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 				    </code>
 				</pre>
 			</section>
-		</article>
-
+		</article>		
+		
+		<section class="slide">
+		<h1>Logging</h1>
+		<p></p>
+		</div>
+		</section>
+		
+		<section class="slide">
+		<h1>Logging errors to console</h1>
+		</div>
+		</section>
+		
+		
 		<section class="slide">
 		<h1>Logging actions with iStats</h1>
 <pre class="prettyprint">
@@ -284,11 +304,6 @@ dragend: function(){
 </pre>
 		<div class="quicknote">
 			<p><a href="http://www.bbc.co.uk/frameworks/istats/guides/logging-actions">http://www.bbc.co.uk/frameworks/istats/guides/logging-actions</a></p>
-		</div>
-		</section>
-
-		<section class="slide">
-		<h1>Logging</h1>
 		</div>
 		</section>
 
