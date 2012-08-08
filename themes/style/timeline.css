@@ -1,9 +1,3 @@
-.csstransitions .timeline h1.suck:hover{
-	bottom: 400px !important;
-	-webkit-transform: scale(0.1) rotate( 180deg );  
-	-webkit-transition: 2s ease-in;
-}
-
 .timeline h1,
 .timeline h2,
 .timeline p,
