@@ -57,9 +57,9 @@
 }
 .timeline #flashtimeline {
 	position:relative;
-	top:120px;
+	top:20px;
 	width: 630px;
-	margin: 0px auto;
+	margin: 0px 0px 20px 0px;
 	border: solid 5px lightblue;
 	text-align: center;
 	background-color:white;
