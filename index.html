@@ -498,6 +498,13 @@ dragend: function(){
 		<section class="slide">
 		<h1>Caching</h1>
 		<h2>mod_cache on the News Stack</h2>
+		<ul>
+			<li>News Platform has an Apache httpd with mod_cache configured into it</li>
+			<li>Single use case for /kltimeline is from Topical News pages</li>
+			<li>Requests are proxied from the Topical News page to PAL app</li>
+			<li>Obviates the need for a specific caching implementation in the PAL app</li>
+			<li>Load test (hitting the News Platform) to verify caching strategy</li>
+		</ul>
 		<div class="quicknote">
 			<p><a href="https://confluence.dev.bbc.co.uk/display/frameworks/Sharing+PAL+Content+with+News+Stack">https://confluence.dev.bbc.co.uk/display/frameworks/Sharing+PAL+Content+with+News+Stack</a></p>
 

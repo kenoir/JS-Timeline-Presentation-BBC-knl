@@ -78,7 +78,7 @@
 .timeline .quicknote{
 	text-align: center;
 	position: relative;
-	top: 30px;
+	top: 50px;
 }
 .timeline iframe::-webkit-scrollbar {  
 	display: none;
