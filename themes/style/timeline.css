@@ -6,8 +6,8 @@
 }
 
 .timeline h1{
-	top: auto !important;
-	bottom: -20px !important; 
+	top: 45px !important;
+	bottom: auto !important; 
 	z-index: 9999;
 	font-size: 2.5em;
 }
@@ -18,6 +18,7 @@
 
 .timeline .slide pre {
 	padding-left: 30px !important;
+	top: 120px !important;
 }
 .timeline .slide blockquote{
 	position: relative;
@@ -28,7 +29,6 @@
 .cssreflections .timeline .slide h1{
 	-webkit-box-reflect: below -0.556em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent)) !important;
 }
-
 .cssreflections .timeline .slide h2{
 	text-align:center;
 	-webkit-box-reflect: below -0.256em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent)) !important;
@@ -49,13 +49,13 @@
 
 .timeline ul{
 	position:relative;
-	top:100px;
+	top:140px;
 	left:20%;
 	width:80%;
 }
 .timeline #flashtimeline {
 	position:relative;
-	top:100px;
+	top:120px;
 	width: 630px;
 	margin: 0px auto;
 	border: solid 5px lightblue;
@@ -63,7 +63,7 @@
 	background-color:white;
 }
 .timeline .links-section{
-	top:100px;
+	top:120px;
 	text-align:center;
 	position:relative;
 	width: 50%;
@@ -72,6 +72,10 @@
 .timeline .quicknote{
 	text-align:center;
 }
+.timeline iframe::-webkit-scrollbar {  
+	    display: none;
+}
+
 .timeline iframe,
 .timeline .image-cradle img {
 	border: solid 5px lightblue;
@@ -82,7 +86,7 @@
 .timeline iframe,
 .timeline .image-cradle{
 	position:relative;
-	top:20px;    
+	top:120px;    
 }
 .timeline iframe{
 	width:1000px;
@@ -100,7 +104,7 @@
 .timeline .fancy-transform {
 	display:block;
 	position:relative;
-	top:100px;
+	top:200px;
 	left: 30%;
 	width:40%;
 	height:200px;
