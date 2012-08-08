@@ -23,6 +23,8 @@
 }
 .timeline .slide pre.smaller {
 	font-size: 12px !important;
+	width:50%;
+	left: 25%;
 }
 .timeline .slide blockquote{
 	position: relative;
@@ -147,7 +149,7 @@
   padding:0px;
   margin:0px;
 }
-.timeline article#monitoring code div.highlightable:hover{  
+.timeline code div.highlightable:hover{  
 	-webkit-transform: scale(1.5);
 	-webkit-transition-duration: 0.5s;
 	background-color: #ffffff;

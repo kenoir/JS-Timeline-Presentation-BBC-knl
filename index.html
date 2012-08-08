@@ -133,12 +133,12 @@
 		<pre class="prettyprint smaller">
 <code class="language-javascript">
 <div class="highlightable">describe('makeDraggable',function(){</div>
-    it('should return a new Draggable object that is also appended as a property to the timeline dom element',function(){
+    <div class="highlightable">it('should return a new Draggable object that is also appended as a property to the timeline dom element',function(){</div>
       var graphicalTimeline = dummyTimeline(); 
       var draggableInstance = graphicalTimeline.makeDraggable();
       var draggableInstanceOnTimeline = graphicalTimeline.$timeline.get(0).draggableInstance;
 
-      expect(draggableInstance).toBeAnInstanceOf(Draggable);
+      <div class="highlightable">      expect(draggableInstance).toBeAnInstanceOf(Draggable);</div>
       expect(draggableInstance).toEqual(draggableInstanceOnTimeline);
     });	
 
