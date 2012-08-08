@@ -129,7 +129,7 @@
 		<iframe src="local_resources/timeline/specs/kltimeline.html"></iframe>
 		</section>
 
-		<article class="slide wider">
+		<article class="slide wider" id="unittest">
 		    <h1>PHPUnit test strategy</h1>
 		    <section>
 		        <h2>Our humble aims</h2>
@@ -140,29 +140,29 @@
 		    </section>
 		    
 		    <section>
-		         <code>
+		    <pre>
+		         <code class="language-php">
 		         public function testLoadJsonThrowsExceptionWhenResponseIs404() {
-			    	$reflector = new ReflectionClass('Loader');    	
-			    	$testMethod = $reflector->getMethod('_loadJson');
-			    	$testMethod->setAccessible(true);
-			    	
-			    	$httpClient = $this->getMock('BBC_Http_Client');    	
-			    	$httpResponse = new Zend_Http_Response(404, array(), 'test');
-			    	
-			    	$httpClient->expects($this->any())
-			    	->method('request')
-			    	->will($this->returnValue($httpResponse));
-			    	
-			    	$this->_testLoader->setHttpClient($httpClient);
-			    	
-			    	try {
-			    		$processedData = $testMethod->invoke($this->_testLoader);
-			    	} catch (Exception $expected) {
-			    		return;
-			    	}
-			    	$this->fail('loadJson does not generate exception when response is 404');
-			    }
+		         $reflector = new ReflectionClass('Loader');
+		         $testMethod = $reflector->getMethod('_loadJson');
+		         $testMethod->setAccessible(true);
 		         
+		         $httpClient = $this->getMock('BBC_Http_Client');
+		         $httpResponse = new Zend_Http_Response(404, array(), 'test');
+		         
+		         $httpClient->expects($this->any())
+		         ->method('request')
+		         ->will($this->returnValue($httpResponse));
+		         
+		         $this->_testLoader->setHttpClient($httpClient);
+		         try {
+		             $processedData = $testMethod->invoke($this->_testLoader);
+		         } catch (Exception $expected) {
+		             return;
+		         }
+		         $this->fail('loadJson does not generate exception when response is 404');
+}
+		      </pre> 
 		         </code>
 		    </section>
 		</article>

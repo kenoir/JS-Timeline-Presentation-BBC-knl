@@ -150,6 +150,38 @@
 	color: #ff0000 !important;
 }
 
+
+.timeline article#unittest section {
+	font-size: 12px !important;
+	float: left;
+	padding-left: 10px;
+}
+
+.timeline article#unittest section:first-of-type {
+	font-size: 16px !important;
+	width: 600px;
+}
+
+.timeline article#unittest section:last-of-type {
+	width: 600px;
+}
+
+.timeline article#unittest code div.highlightable:hover{  
+    -webkit-transform: scale(1.5);
+	-webkit-transition-duration: 0.5s;
+	background-color: #ffffff;
+	box-shadow: #CCC 5px 5px 20px 2px;
+	padding-left: 30px !important; 
+}
+
+.timeline article#unittest code div.highlightable:hover span {
+    color: #ff0000 !important;
+}
+
+
+
+
+
 .timeline .no-top-offset{
 	top: 5px;
 }
