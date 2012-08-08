@@ -28,6 +28,10 @@
 		<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 		<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
 
+		<!-- Code formatting -->
+		<link href="assets/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="assets/google-code-prettify/prettify.js"></script>
+
 		<!-- Required Modernizr file -->
 		<script src="modernizr.custom.js"></script>
 		<script src="local_resources/swfobject.js"></script>
@@ -103,7 +107,7 @@
 
 		<section class="slide">
 		<h1>Rake Tasks</h1>
-<pre>
+<pre class="prettyprint">
 > rake --tasks
 rake buildjs                 # Optimize Javascript
 rake ci:features             # Run Cukes in CI
@@ -138,8 +142,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 			<li>Parses the DOM for CSS selectors & creates data model</li>
 			<li>Has an internal representation of state not held in the DOM</li>
 			<li>Generates a view based on Mustache templates </li>
-			<li>Built for flexibility so that Timeline 2.0 can be built quickly!</li>
-			<li>Ah, wait ... :(</li>
+			<li>Built for flexibility so that Timeline 2.0 <del>can be</del> could have been built quickly!</li>
 		</ul>
 		</section>
 
@@ -166,7 +169,8 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		<h1>Responsive design & animation</h1>
 		<div class="fancy-transform">
 
-<pre>
+<pre class="prettyprint">
+<code class="language-css">
 /* We use Modernizr to check whether transform is
    available in the browser and apply a JavaScript
    animation if it's not ... */
@@ -181,6 +185,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 
 /* But we can't be sure that this code will behave
    the same way in different versions of WebKit! */
+</code>
 </pre>
 		</div>
 
@@ -236,8 +241,8 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 
 		<section class="slide">
 		<h1>Logging actions with iStats</h1>
-<pre>
-...
+<pre class="prettyprint">
+<code class="language-javascript">
 dragend: function(){
   var logData = { 
     'eventResourceURL' : 
@@ -246,7 +251,7 @@ dragend: function(){
 
   Stats.log('dragged.timeline.kltimeline',logData);
 }
-...
+</code>
 </pre>
 		<div class="quicknote">
 			<p><a href="http://www.bbc.co.uk/frameworks/istats/guides/logging-actions">http://www.bbc.co.uk/frameworks/istats/guides/logging-actions</a></p>
@@ -312,6 +317,7 @@ dragend: function(){
 		<script>
 			$(function() {
 				$.deck('.slide');
+				prettyPrint();
 			});
 		</script>
 	</body>
