@@ -21,6 +21,10 @@
 	font-size: 1.5em;
 	text-align:center;
 }
+
+.timeline .slide pre {
+	padding-left: 30px !important;
+}
 .cssreflections .timeline .slide h1{
 	-webkit-box-reflect: below -0.556em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent)) !important;
 }
@@ -112,4 +116,30 @@
 
 	-webkit-transform: scale(1.5,1.5) rotate( 10deg );
 	-webkit-transition-duration: 0.5s;
+}
+
+.timeline article#monitoring section {
+	font-size: 12px !important;
+	float: left;
+	padding-left: 10px;
+}
+
+.timeline article#monitoring section:first-of-type {
+	width: 600px;
+}
+
+.timeline article#monitoring section:last-of-type {
+	width: 600px;
+}
+
+.timeline article#monitoring code div.highlightable:hover{  
+    -webkit-transform: scale(1.5);
+	-webkit-transition-duration: 0.5s;
+	background-color: #ffffff;
+	box-shadow: #CCC 5px 5px 20px 2px;
+	padding-left: 30px !important; 
+}
+
+.timeline article#monitoring code div.highlightable:hover span {
+    color: #ff0000 !important;
 }

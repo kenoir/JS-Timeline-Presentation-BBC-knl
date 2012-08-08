@@ -238,6 +238,37 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		</div>
 		-->
 		</section>
+		
+		<article class="slide wider" id="monitoring">
+			<h1>Zenoss monitoring</h1>
+			<section>
+				<ul style="top: 20px;">
+					<li>This</li>
+					<li>And that as well</li>
+				</ul>
+			</section>
+			<section>
+				<pre class="prettyprint"><code>; monitoring
+						kltimeline.monitoring.error404.thresholds.maxThreshW = 3
+						kltimeline.monitoring.error404.thresholds.maxThreshI = 1.5
+						kltimeline.monitoring.error404.thresholds.maxThreshD = 0.3
+						
+						<div class="highlightable">
+						kltimeline.monitoring.error500.thresholds.maxThreshW = 3
+						kltimeline.monitoring.error500.thresholds.maxThreshI = 1.5
+						kltimeline.monitoring.error500.thresholds.maxThreshD = 0.3
+						</div>
+						kltimeline.monitoring.error503.thresholds.maxThreshW = 3
+						kltimeline.monitoring.error503.thresholds.maxThreshI = 1.5
+						kltimeline.monitoring.error503.thresholds.maxThreshD = 0.3
+						
+						kltimeline.monitoring.errorServiceInvalidData.thresholds.maxThreshW = 3
+						kltimeline.monitoring.errorServiceInvalidData.thresholds.maxThreshI = 1.5
+						kltimeline.monitoring.errorServiceInvalidData.thresholds.maxThreshD = 0.3		
+				    </code>
+				</pre>
+			</section>
+		</article>
 
 		<section class="slide">
 		<h1>Logging actions with iStats</h1>
