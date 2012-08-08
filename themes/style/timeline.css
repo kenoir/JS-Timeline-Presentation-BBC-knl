@@ -57,6 +57,9 @@
 	top: 50px;
 	left: 20%;
 	position: relative;
+	width: 60%;
+}
+.timeline .slide blockquote.fullwidth{
 	width: 80%;
 }
 .timeline #flashtimeline {
