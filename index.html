@@ -128,6 +128,40 @@
 		<iframe src="local_resources/timeline/specs/kltimeline.html"></iframe>
 		</section>
 
+		<section class="slide">
+		<h1>Jasmine Example</h1>
+		<pre class="prettyprint smaller">
+<code class="language-javascript">
+<div class="highlightable">describe('makeDraggable',function(){</div>
+    it('should return a new Draggable object that is also appended as a property to the timeline dom element',function(){
+      var graphicalTimeline = dummyTimeline(); 
+      var draggableInstance = graphicalTimeline.makeDraggable();
+      var draggableInstanceOnTimeline = graphicalTimeline.$timeline.get(0).draggableInstance;
+
+      expect(draggableInstance).toBeAnInstanceOf(Draggable);
+      expect(draggableInstance).toEqual(draggableInstanceOnTimeline);
+    });	
+
+    it('should set dragInProgress to true when dragging is in progress',function(){
+      var graphicalTimeline = dummyTimeline(); 
+      var fireEvent = function(element,event){
+        var e = document.createEvent("HTMLEvents");
+        e.initEvent(event, true, true ); // event type,bubbling,cancelable
+        return !element.dispatchEvent(e);
+      }
+
+      var timelineElement = graphicalTimeline.$timeline.get(0);
+      fireEvent(timelineElement,'mousedown');
+      fireEvent(timelineElement,'mousemove');
+
+      expect(graphicalTimeline.dragInProgress).toEqual(true);    
+    });
+  });
+</code></pre>
+		</section>
+
+	
+
 		<article class="slide wider" id="unittest">
 		    <h1>PHPUnit test strategy</h1>
 		    <section>
@@ -202,7 +236,7 @@ public function testLoadJsonThrowsExceptionWhenResponseIs404() {
 	        <ul class="no-top-offset">
 	            <li>Demands jesuitical commitment to the cause</li>
 	        </ul>
-        </section>
+        	</section>
 
 		<section class="slide">
 		<h1>Rake Tasks</h1>
@@ -288,7 +322,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		</section>
 
 		<section class="slide">
-		<h1>Stuff i've learnt</h1>
+		<h1>Lessons learnt</h1>
 		<ul>
 			<li><a href="http://pivotal.github.com/jasmine/">Jasmine</a> is awesome.</li>
 			<li>It might have been OK to throw away JQuery.</li>
@@ -300,7 +334,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 				</a>
 			</li>
 			<li>'Responsive design' means 'lots and lots of work for web developers'.</li>
-			<li>Testing JavaScript in (our) CI environment is hard.</li>
+			<li>Testing JavaScript in CI (without a PAL app) is hard.</li>
 		</ul>
 		</section>
 
