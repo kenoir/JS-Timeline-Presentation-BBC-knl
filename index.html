@@ -146,14 +146,14 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		<section class="slide">
 		<h1>JavaScript Libraries</h1>
 		<ul>
-			<li><a href="http://requirejs.org/">Require.js: http://requirejs.org/</a></li>
-			<li><a href="http://mustache.github.com/">Mustache: http://mustache.github.com/</a></li>
-			<li><a href="https://github.com/andyet/ICanHaz.js">ICanHaz: https://github.com/andyet/ICanHaz.js (Forked to https://github.com/kenoir/ICanHaz.js)</a></li>
-			<li><a href="http://jquery.com/">JQuery: http://jquery.com/</a></li>
-			<li><a href="http://jqueryui.com/"><del>JQueryUI: http://jqueryui.com</del></a></li>
-			<li><a href="https://github.com/kenoir/drgbl.js">drgble.js: https://github.com/kenoir/drgbl.js</a></li>
-			<li><a href="https://github.com/Wolfy87/EventEmitter/">EventEmitter: https://github.com/Wolfy87/EventEmitter/</a></li>
-			<li><a href="http://modernizr.com/">Modernizr: http://modernizr.com/</a></li>
+			<li>Require.js: <a href="http://requirejs.org/">http://requirejs.org/</a></li>
+			<li>Mustache: <a href="http://mustache.github.com/">http://mustache.github.com/</a></li>
+			<li>ICanHaz: <a href="https://github.com/andyet/ICanHaz.js">https://github.com/andyet/ICanHaz.js </a>&nbsp;<a href="https://github.com/kenoir/ICanHaz.js">(Forked!)</a></li>
+			<li>JQuery: <a href="http://jquery.com/">http://jquery.com/</a></li>
+			<li><del>JQueryUI: <a href="http://jqueryui.com/">http://jqueryui.com</del></a></li>
+			<li>drgbl.js <a href="https://github.com/kenoir/drgbl.js">https://github.com/kenoir/drgbl.js</a></li>
+			<li>EventEmitter <a href="https://github.com/Wolfy87/EventEmitter/">https://github.com/Wolfy87/EventEmitter/</a></li>
+			<li>Modernizr <a href="http://modernizr.com/">http://modernizr.com/</a></li>
 		</ul>
 		</section>
 
@@ -193,7 +193,11 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 			<li>It might have been OK to throw away JQuery.</li>
 			<li>Maybe backbone.js (or some other framework) would have helped.</li>
 			<li>CSS3 rendering engines are not to be trusted.</li>
-			<li>Making asynchronous requests between www & static doesn't work.</li>
+			<li>Making asynchronous requests between www & static doesn't work. <br/> See:
+				<a href="http://www.w3.org/TR/cors/">
+					<ABBR TITLE="Cross Origin Request Sharing">CORS</ABBR>
+				</a>
+			</li>
 			<li>'Responsive design' means 'lots and lots of work for web developers'.</li>
 			<li>Testing JavaScript in (our) CI environment is hard.</li>
 		</ul>
@@ -262,11 +266,7 @@ dragend: function(){
 
 		</div>
 		</section>
-
-
-
 		<!-- End slides. -->
-
 
 		<!-- Begin extension snippets. Add or remove as needed. -->
 
@@ -276,6 +276,7 @@ dragend: function(){
 
 		<!-- deck.status snippet -->
 		<p class="deck-status">
+		<span onclick="$.deck('toggleMenu');">&#21512;</span>
 		<span class="deck-status-current"></span>
 		/
 		<span class="deck-status-total"></span>
