@@ -123,7 +123,6 @@
 
 .timeline .fancy-transform:hover {
 	top:120px;
-
 	-webkit-transform: scale(1.5,1.5) rotate( 10deg );
 	-webkit-transition-duration: 0.5s;
 }

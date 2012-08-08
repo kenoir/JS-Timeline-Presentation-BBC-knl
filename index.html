@@ -166,17 +166,11 @@
 		    <h1>PHPUnit test strategy</h1>
 		    <section>
 		        <h2>Our humble aims</h2>
-		        <ul>
+		        <ul class="no-top-offset">
 		             <li>Test Models and Controllers</li>
 		             <li>Coverage</li>
 		             <li>Quality</li>
-		        </ul>
-		        
-		        <h2>Jasmine tea time reading</h2>
-		        <p><a htef="http://googletesting.blogspot.co.uk/2010/07/code-coverage-goal-80-and-no-less.html">
-		        A Chinese parable on Unit tests
-		        </a>
-		        </p>		    
+		        </ul> 
 		    </section>
 		    
 		    <section>
@@ -203,12 +197,61 @@ public function testLoadJsonThrowsExceptionWhenResponseIs404() {
     }
     <div class="highlightable">
     $this->fail('loadJson does not generate exception when response is 404');
-    </div>
-}
+    </div>}
 		      </pre> 
 		         </code>
 		    </section>
 		</article>
+		
+		<section class="slide">
+		<h1>A Chinese parable on Unit Tests</h1>		
+		
+<blockquote style="text-align: left;">
+<span><i>“I am ready to write some unit tests. What code coverage should I aim for?”</i></span>
+<span>The great master replied:</span><br>
+
+<span><i>“Don’t worry about coverage, just write some good tests.”</i></span>
+<span>The young programmer smiled, bowed, and left.</span><br>
+
+<span>Later that day, a second programmer asked the same question.</span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">The great master pointed at a pot of boiling water and said:</span><br>
+<blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“How many grains of rice should I put in that pot?”</i></span></blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">The programmer, looking puzzled, replied:</span><br>
+<blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“How can I possibly tell you? It depends on how many people you need to feed, how hungry they are, what other food you are serving, how much rice you have available, and so on.”</i></span></blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">“<i>Exactly,”</i> said the great master.</span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">The second programmer smiled, bowed, and left.</span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><br></span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"></span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">Toward the end of the day, a third programmer came and asked the same question about code coverage.</span><br>
+<blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“Eighty percent and no less!”</i> Replied the master in a stern voice, pounding his fist on the table.</span></blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">The third programmer smiled, bowed, and left.</span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><br></span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"></span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">After this last reply, a young apprentice approached the great master:</span><br>
+<blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“Great master, today I overheard you answer the same question about code coverage with three different answers. Why?”</i></span></blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">The great master stood up from his chair:</span><br>
+<blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“Come get some fresh tea with me and let’s talk about it.”</i></span></blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">After they filled their cups with smoking hot green tea, the great master began:</span><br>
+<blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“The first programmer is new and just getting started with testing. Right now he has a lot of code and no tests. He has a long way to go; focusing on code coverage at this time would be depressing and quite useless. He’s better off just getting used to writing and running some tests. He can worry about coverage later.</i></span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>The second programmer, on the other hand, is quite experienced both at programming and testing. When I replied by asking her how many grains of rice I should put in a pot, I helped her realize that the amount of testing necessary depends on a number of factors, and she knows those factors better than I do – it’s her code after all. There is no single, simple, answer, and she’s smart enough to handle the truth and work with that.”</i></span></blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“I see,”</i> said the young apprentice, <i>“but if there is no single simple answer, then why did you tell the third programmer ‘Eighty percent and no less’?”</i></span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">The great master laughed so hard and loud that his belly, evidence that he drank more than just green tea, flopped up and down.</span><br>
+<blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"><i>“The third programmer wants only simple answers – even when there are no simple answers … and then does not follow them anyway.”</i></span></blockquote>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;">The young apprentice and the grizzled great master finished drinking their tea in contemplative silence.</span><br>
+<span class="Apple-style-span" style="color: #212324; font-family: Arial, Helvetica, sans-serif; font-size: medium;"></span></div>
+		
+		</section>
+		
+				        
+		        
+		        
 		
 		<!-- 
 		<section class="slide wider">
