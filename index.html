@@ -104,8 +104,7 @@
 		<section class="slide insterstitial">
 		<h1>The Build</h1>
 		</section>
-
-
+		
 		<section class="slide">
 		<h1>The Prototype</h1>
 		<div id="flashtimeline">
@@ -130,26 +129,71 @@
 		<iframe src="local_resources/timeline/specs/kltimeline.html"></iframe>
 		</section>
 
+		<article class="slide wider">
+		    <h1>PHPUnit test strategy</h1>
+		    <section>
+		        <h2>Our humble aims</h2>
+		        <ul>
+		             <li></li>
+		        </ul>
+		    
+		    </section>
+		    
+		    <section>
+		         <code>
+		         public function testLoadJsonThrowsExceptionWhenResponseIs404() {
+			    	$reflector = new ReflectionClass('Loader');    	
+			    	$testMethod = $reflector->getMethod('_loadJson');
+			    	$testMethod->setAccessible(true);
+			    	
+			    	$httpClient = $this->getMock('BBC_Http_Client');    	
+			    	$httpResponse = new Zend_Http_Response(404, array(), 'test');
+			    	
+			    	$httpClient->expects($this->any())
+			    	->method('request')
+			    	->will($this->returnValue($httpResponse));
+			    	
+			    	$this->_testLoader->setHttpClient($httpClient);
+			    	
+			    	try {
+			    		$processedData = $testMethod->invoke($this->_testLoader);
+			    	} catch (Exception $expected) {
+			    		return;
+			    	}
+			    	$this->fail('loadJson does not generate exception when response is 404');
+			    }
+		         
+		         </code>
+		    </section>
+		</article>
+		
+		<!-- 
 		<section class="slide wider">
 		<h1>PHPUnit Tests Report</h1>
 		<iframe src="local_resources/phpunit.html"></iframe>
 		</section>
-
+        -->
+        
 		<section class="slide wider">
 		<h1>PHPUnit Tests Coverage</h1>
 		<iframe src="local_resources/unit_test_coverage/index.html"></iframe>
 		</section>
 		
 		<section class="slide wider">
-		<h1>TDD Approach</h1>
-        <h2>Benefits:</h2>
-        <ul>
-            <li>Allows for a short feedback loop</li>
-            <li>Reduces time spent in debugging and refactoring</li>
-            <li>Increases reliability</li>
-            <li>Tells you if a late change has broken previously working code</li>
-        </ul>
-		</section>
+			<h1>TDD Approach</h1>
+	        <h2>Benefits:</h2>
+	        <ul class="no-top-offset">
+	            <li>Allows for a short feedback loop</li>
+	            <li>Reduces time spent in debugging and refactoring</li>
+	            <li>Increases reliability</li>
+	            <li>Informs if last change has broken previously working code</li>
+	            <li>Helps simplification of the code (small classes and decoupled code)</li>
+	        </ul>
+	        <h2>But...</h2>
+	        <ul class="no-top-offset">
+	            <li>Demands jesuitical commitment to the cause</li>
+	        </ul>
+        </section>
 
 		<section class="slide">
 		<h1>Rake Tasks</h1>
@@ -254,6 +298,16 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		<!-- The PAL Application -->
 		<section class="slide insterstitial">
 		<h1>The PAL App</h1>
+		<ul>
+		    <li>Forge</li>
+		    <li>BBC Module</li>
+		    <li>Spectrum</li>
+		</ul>
+		
+		<h2>Our aims were:</h2>
+		<ul>
+		    <li></li>
+		</ul>
 		</section>
 		
 		<section class="slide">
@@ -263,7 +317,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 
 		<!-- The PAL Application -->
 		<section class="slide insterstitial">
-		<h1>Monitoring, Logging &amp; Caching</h1>
+		<h1>Non-Functional Requirements</h1>
 		</section>
 	
 		<section class="slide">
@@ -285,7 +339,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 		<article class="slide wider" id="monitoring">
 			<h1>What we monitor</h1>
 			<section>
-				<ul style="top: 20px;">
+				<ul class="no-top-offset">
 				    <li>404s</li>
 					<li>Service errors</li>
 					<li>Unexistent Timeline resource</li>

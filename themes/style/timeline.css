@@ -148,3 +148,7 @@
 .timeline article#monitoring code div.highlightable:hover span {
     color: #ff0000 !important;
 }
+
+.timeline .no-top-offset{
+	top: 5px;
+}
