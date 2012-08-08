@@ -116,9 +116,13 @@
 		
 		<section class="slide wider">
 		<h1>TDD Approach</h1>
-		<ul>
-		    <li>Testing strategy</li>
-		</ul>
+        <h2>Benefits:</h2>
+        <ul>
+            <li>Allows for a short feedback loop</li>
+            <li>Reduces time spent in debugging and refactoring</li>
+            <li>Increases reliability</li>
+            <li>Tells you if a late change has broken previously working code</li>
+        </ul>
 		</section>
 
 		<section class="slide">
@@ -259,9 +263,16 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 			<h1>What we monitor</h1>
 			<section>
 				<ul style="top: 20px;">
+				    <li>404s</li>
 					<li>Service errors</li>
 					<li>Unexistent Timeline resource</li>
-					<li>Invalid Timeline Json feed</li>
+					<li>Invalid Timeline Json feed:
+					    <ul style="top: 5px; left: 5px;">
+					      <li>Malformatted json</li>
+					      <li>No timeline properties</li>
+					      <li>No events etc.</li>
+					    </ul>
+					</li>
 				</ul>
 			</section>
 			<section>
