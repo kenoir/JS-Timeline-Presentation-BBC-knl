@@ -6,12 +6,15 @@
 }
 
 .timeline h1{
+	position:relative;
 	top: 45px !important;
 	bottom: auto !important; 
 	z-index: 9999;
 	font-size: 2.5em;
 }
 .timeline h2{
+	position: relative;
+	top: 60px;
 	font-size: 1.5em;
 	text-align:center;
 }
@@ -115,8 +118,7 @@
 }
 
 .timeline .fancy-transform:hover {
-	background-color:cyan;
-	top:200px;
+	top:120px;
 
 	-webkit-transform: scale(1.5,1.5) rotate( 10deg );
 	-webkit-transition-duration: 0.5s;
