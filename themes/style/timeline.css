@@ -5,23 +5,22 @@
 	font-family: 'Source Sans Pro', sans-serif !important;
 }
 
+.csstransforms .slide h1,
 .timeline h1{
-	position:relative;
-	top: 45px !important;
-	bottom: auto !important; 
+	position: relative!important;
+	top:50px;
 	z-index: 9999;
 	font-size: 2.5em;
+	padding: 0px !important;
 }
 .timeline h2{
-	position: relative;
-	top: 60px;
 	font-size: 1.5em;
 	text-align:center;
+	-webkit-box-reflect: none !important;
 }
-
 .timeline .slide pre {
+	top: 50px;
 	padding-left: 30px !important;
-	top: 120px !important;
 }
 .timeline .slide blockquote{
 	position: relative;
@@ -40,8 +39,8 @@
 	background-color:lightblue;  
 	font-size:2em  
 }
-
 .timeline .insterstitial h1{
+	position: absolute !important;
 	top: 50% !important;
 	bottom: auto !important; 
 }
@@ -51,10 +50,10 @@
 }
 
 .timeline ul{
-	position:relative;
-	top:140px;
-	left:20%;
-	width:80%;
+	top: 50px;
+	left: 20%;
+	position: relative;
+	width: 80%;
 }
 .timeline #flashtimeline {
 	position:relative;
@@ -76,7 +75,7 @@
 	text-align:center;
 }
 .timeline iframe::-webkit-scrollbar {  
-	    display: none;
+	display: none;
 }
 
 .timeline iframe,
@@ -89,7 +88,7 @@
 .timeline iframe,
 .timeline .image-cradle{
 	position:relative;
-	top:120px;    
+	top:40px;    
 }
 .timeline iframe{
 	width:1000px;
@@ -140,7 +139,7 @@
 }
 
 .timeline article#monitoring code div.highlightable:hover{  
-    -webkit-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
 	-webkit-transition-duration: 0.5s;
 	background-color: #ffffff;
 	box-shadow: #CCC 5px 5px 20px 2px;
@@ -148,7 +147,7 @@
 }
 
 .timeline article#monitoring code div.highlightable:hover span {
-    color: #ff0000 !important;
+	color: #ff0000 !important;
 }
 
 .timeline .no-top-offset{
