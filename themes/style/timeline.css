@@ -16,7 +16,6 @@
 .timeline h2{
 	font-size: 1.5em;
 	text-align:center;
-	-webkit-box-reflect: none !important;
 }
 .timeline .slide pre {
 	top: 50px;
@@ -33,7 +32,7 @@
 }
 .cssreflections .timeline .slide h2{
 	text-align:center;
-	-webkit-box-reflect: below -0.256em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent)) !important;
+	-webkit-box-reflect: none !important;
 }
 .timeline .insterstitial{
 	background-color:lightblue;  
@@ -72,7 +71,9 @@
 	margin: 0px auto;
 }
 .timeline .quicknote{
-	text-align:center;
+	text-align: center;
+	position: relative;
+	top: 30px;
 }
 .timeline iframe::-webkit-scrollbar {  
 	display: none;
