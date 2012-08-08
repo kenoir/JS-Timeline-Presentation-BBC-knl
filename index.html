@@ -133,33 +133,43 @@
 		    <section>
 		        <h2>Our humble aims</h2>
 		        <ul>
-		             <li></li>
+		             <li>Test Models and Controllers</li>
+		             <li>Coverage</li>
+		             <li>Quality</li>
 		        </ul>
-		    
+		        
+		        <h2>Jasmine tea time reading</h2>
+		        <p><a htef="http://googletesting.blogspot.co.uk/2010/07/code-coverage-goal-80-and-no-less.html">
+		        A Chinese parable on Unit tests
+		        </a>
+		        </p>		    
 		    </section>
 		    
 		    <section>
-		    <pre>
+		    <pre class="prettyprint">
 		         <code class="language-php">
-		         public function testLoadJsonThrowsExceptionWhenResponseIs404() {
-		         $reflector = new ReflectionClass('Loader');
-		         $testMethod = $reflector->getMethod('_loadJson');
-		         $testMethod->setAccessible(true);
-		         
-		         $httpClient = $this->getMock('BBC_Http_Client');
-		         $httpResponse = new Zend_Http_Response(404, array(), 'test');
-		         
-		         $httpClient->expects($this->any())
-		         ->method('request')
-		         ->will($this->returnValue($httpResponse));
-		         
-		         $this->_testLoader->setHttpClient($httpClient);
-		         try {
-		             $processedData = $testMethod->invoke($this->_testLoader);
-		         } catch (Exception $expected) {
-		             return;
-		         }
-		         $this->fail('loadJson does not generate exception when response is 404');
+public function testLoadJsonThrowsExceptionWhenResponseIs404() {
+    <div class="highlightable">
+    $reflector = new ReflectionClass('Loader');
+    $testMethod = $reflector->getMethod('_loadJson');
+    $testMethod->setAccessible(true);</div>
+    
+    <div class="highlightable">
+    $httpClient = $this->getMock('BBC_Http_Client');
+    $httpResponse = new Zend_Http_Response(404, array(), 'test');
+    $httpClient->expects($this->any())
+    ->method('request')
+    ->will($this->returnValue($httpResponse));
+    </div>
+    $this->_testLoader->setHttpClient($httpClient);
+    try {
+        $processedData = $testMethod->invoke($this->_testLoader);
+    } catch (Exception $expected) {
+        return;
+    }
+    <div class="highlightable">
+    $this->fail('loadJson does not generate exception when response is 404');
+    </div>
 }
 		      </pre> 
 		         </code>
