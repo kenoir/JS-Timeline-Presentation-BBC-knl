@@ -329,7 +329,7 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 	
 		<section class="slide">
 		<h1>The PAL App Structure</h1>
-	    <iframe src="local_resources/phpdocs/index.html"></iframe>
+	    	<iframe src="local_resources/phpdocs/index.html"></iframe>
 		</section>
 
 		<!-- The PAL Application -->
@@ -370,23 +370,24 @@ rake sandbox:focus:features  # Run Cukes tagged @now against Sandbox
 				</ul>
 			</section>
 			<section>
-				<pre class="prettyprint"><code>; monitoring
+				<pre class="prettyprint no-top-offset"><code>; monitoring
+						<div class="highlightable">
 						kltimeline.monitoring.error404.thresholds.maxThreshW = 3
 						kltimeline.monitoring.error404.thresholds.maxThreshI = 1.5
 						kltimeline.monitoring.error404.thresholds.maxThreshD = 0.3
-						
-						<div class="highlightable">
+						</div><div class="highlightable">
 						kltimeline.monitoring.error500.thresholds.maxThreshW = 3
 						kltimeline.monitoring.error500.thresholds.maxThreshI = 1.5
 						kltimeline.monitoring.error500.thresholds.maxThreshD = 0.3
-						</div>
+						</div><div class="highlightable">
 						kltimeline.monitoring.error503.thresholds.maxThreshW = 3
 						kltimeline.monitoring.error503.thresholds.maxThreshI = 1.5
 						kltimeline.monitoring.error503.thresholds.maxThreshD = 0.3
-						
+						</div><div class="highlightable">
 						kltimeline.monitoring.errorServiceInvalidData.thresholds.maxThreshW = 3
 						kltimeline.monitoring.errorServiceInvalidData.thresholds.maxThreshI = 1.5
 						kltimeline.monitoring.errorServiceInvalidData.thresholds.maxThreshD = 0.3		
+						</div>
 				    </code>
 				</pre>
 			</section>

@@ -128,6 +128,8 @@
 	font-size: 12px !important;
 	float: left;
 	padding-left: 10px;
+	top:40px;
+	position:relative;
 }
 
 .timeline article#monitoring section:first-of-type {
@@ -139,6 +141,10 @@
 	width: 600px;
 }
 
+.timeline article#monitoring code div.highlightable{
+  padding:0px;
+  margin:0px;
+}
 .timeline article#monitoring code div.highlightable:hover{  
 	-webkit-transform: scale(1.5);
 	-webkit-transition-duration: 0.5s;
@@ -184,5 +190,5 @@
 
 
 .timeline .no-top-offset{
-	top: 5px;
+	top: 5px !important;
 }
