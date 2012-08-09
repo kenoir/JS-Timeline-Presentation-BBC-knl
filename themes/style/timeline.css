@@ -105,7 +105,7 @@
 }
 
 .timeline .wider iframe{
-	width:1200px;    
+	width:1200px !important;
 }
 
 .timeline .narrower iframe{
@@ -169,16 +169,13 @@
 	float: left;
 	padding-left: 10px;
 }
-
 .timeline article#unittest section:first-of-type {
 	font-size: 16px !important;
 	width: 600px;
 }
-
 .timeline article#unittest section:last-of-type {
 	width: 600px;
 }
-
 .timeline article#unittest code div.highlightable:hover{  
     -webkit-transform: scale(1.5);
 	-webkit-transition-duration: 0.5s;
@@ -186,11 +183,38 @@
 	box-shadow: #CCC 5px 5px 20px 2px;
 	padding-left: 30px !important; 
 }
-
 .timeline article#unittest code div.highlightable:hover span {
+    color: #ff0000 !important;
+}
+
+
+.timeline article.logging section {
+	font-size: 12px !important;
+	float: left;
+	padding-left: 10px;
+}
+.timeline article.logging section:first-of-type {
+	font-size: 16px !important;
+	width: 600px;
+}
+.timeline article.logging section:last-of-type {
+	width: 600px;
+}
+.timeline article.logging code div.highlightable:hover{  
+    -webkit-transform: scale(1.5);
+	-webkit-transition-duration: 0.5s;
+	background-color: #ffffff;
+	box-shadow: #CCC 5px 5px 20px 2px;
+	padding-left: 30px !important; 
+}
+.timeline article.logging code div.highlightable:hover span {
     color: #ff0000 !important;
 }
 
 .timeline .no-top-offset{
 	top: 5px !important;
+}
+
+section#parable blockquote {
+	font-size: 14px !important;
 }
