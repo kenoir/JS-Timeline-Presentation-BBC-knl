@@ -195,10 +195,10 @@
 }
 .timeline article.logging section:first-of-type {
 	font-size: 16px !important;
-	width: 600px;
+	width: 500px;
 }
 .timeline article.logging section:last-of-type {
-	width: 600px;
+	width: 700px;
 }
 .timeline article.logging code div.highlightable:hover{  
     -webkit-transform: scale(1.5);
