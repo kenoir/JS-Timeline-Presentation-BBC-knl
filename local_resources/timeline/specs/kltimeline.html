@@ -58,7 +58,7 @@
 
       function execJasmine() {
      
-				require({ baseUrl: "file://" + window.location.hostname + '/' + relativePath + '/scripts/kltimeline/', waitSeconds: 30 }); 
+				require({ baseUrl: "http://" + window.location.hostname + '/' + relativePath + '/scripts/kltimeline/', waitSeconds: 30 }); 
 
 				window.webkitRequestAnimationFrame = null;
 				window.mozRequestAnimationFrame = null;
@@ -83,8 +83,8 @@
 				'timeline/models/GraphicalTimeline',
 				'timeline/models/GraphicalTimelineEvent',
 				'timeline/models/ConfigurationLoader',
-				'file://' + window.location.hostname + relativePath + '/specs/timeline/fixtures/TimelineView.js',
-				'file://' + window.location.hostname + relativePath + '/specs/timeline/fixtures/EventView.js',
+				'http://' + window.location.hostname + relativePath + '/specs/timeline/fixtures/TimelineView.js',
+				'http://' + window.location.hostname + relativePath + '/specs/timeline/fixtures/EventView.js',
 				],function(TimelineController,Stats,Parser,Timeline,TimelineEvent,GraphicalTimeline,GraphicalTimelineEvent,ConfigurationLoader,TimelineView,EventView){
           window.js_require_modules = Array();
 					window.js_require_modules['TimelineController'] = TimelineController;
